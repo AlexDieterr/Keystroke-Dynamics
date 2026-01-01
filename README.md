@@ -24,7 +24,7 @@ A Random Forest model was also tested for the identification task. It improved a
 
 Feature importance was analyzed across multiple Random Forest models. Important features were consistent across splits and mainly involved modifier keys like Shift and Return, letter hold times, and transitions between keys. Features related to repetition or session order had very little impact. This shows that identity information comes from fine motor behavior rather than simple timing patterns.
 
-To better explain differences in performance, a separability metric was introduced. This metric compares how far a user is from other users relative to how spread out their own samples are. Separability showed a positive relationship with identification accuracy. Users whose typing patterns were more distinct from others tended to be identified more accurately, even if their typing was not perfectly consistent.
+To better explain differences in performance, I included a separability metric. This metric compares how far a user is from other users relative to how spread out their own samples are. Separability showed a positive relationship with identification accuracy. Users whose typing patterns were more distinct from others tended to be identified more accurately, even if their typing was not perfectly consistent.
 
 ### Advanced Model: XGBoost  
 A gradient boosted tree model was tested to see if a more complex model could further improve identification accuracy. XGBoost achieved similar performance to Random Forest, around 86 percent accuracy, with comparable stability. This suggests that most useful structure in the data is already captured by tree based models, and boosting provides limited additional benefit.
@@ -38,4 +38,4 @@ Typing identity depends more on how different a person’s typing patterns are f
 - Long term changes in typing behavior were not analyzed  
 
 ## Ethical Note  
-Keystroke dynamics can be used as a behavioral biometric, which raises privacy concerns if applied without a user’s knowledge or consent.
+Keystroke dynamics can be used as a behavioral biometric, which could raise privacy concerns if applied without a user’s knowledge or consent.
